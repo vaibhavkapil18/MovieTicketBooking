@@ -1,45 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Web Page Title</title>
-    <!-- You can include CSS stylesheets and JavaScript files here -->
-</head>
-<body>
-    <header>
-        <h1>Welcome to MERU-DATA </h1>
-        <!-- Add navigation or other header content here -->
-    </header>
-    
-    <nav>
-        <!-- Add your navigation menu here -->
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <main>
-        <!-- Your main content goes here -->
-        <section>
-            <h2>About Us</h2>
-            <p>Book your Favourite movie in easiest ways.</p>
-        </section>
-        
-        <section>
-            <h2>Services</h2>
-            <ul>
-                <li><Button>Know the Ratings</Button></li>
-                <li><Button>Book Tickets</Button></li>
-                <li><Button>Update Profile</Button></li>
-            </ul>
-        </section>
-    </main>
-    
-    <footer>
-        <!-- Footer content and copyright information -->
-        <p>&copy; 2023 MERU-DATA @VaibhavKapil</p>
-    </footer>
+<header>
+    <h1>Your Ticket to Cinematic Bliss</h1>
+    <p>Welcome to MD Movie Tickets!</p>
+</header>
+<div>
+    <h2>Movie Dashboard- LATEST MOVIES</h2>
+    <div *ngFor="let movie of movies">
+      <div class="movie-card">
+        <img [src]="movie.imageURL"url="https://m.media-amazon.com/images/M/MV5BOTA3Mjk1YjgtODU1Mi00YzY4LTk1ZjctNmE2Mjc4NGI3MGI1XkEyXkFqcGdeQXVyNjQ1MDcxNzM@._V1_SX300_CR0,0,300,441_AL_.jpg" alt="{{ movie.title }} Image" />
+        <div class="movie-details">
+          <h3>{{ movie.title }}</h3>
+          <p>{{ movie.description }}</p>
+          <p>Release Date: {{ movie.releaseDate }}</p>
+          <p>Genre: {{ movie.genre }}</p>
+          <p>Duration (Minutes): {{ movie.durationMinutes }}</p>
+
+        </div>
+        <button class="BookTickets" ><i class="fa fa-ticket"></i> Book Tickets
+        </button>
+
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+	<p>
+		Created with <i class="fa fa-heart"></i> by
+		<a target="_blank">@Vaibhav Kapil</a>
+		- For Merudata Movie Tickets Booking Application
+		<a target="_blank" ></a>.
+	</p>
+</footer>
