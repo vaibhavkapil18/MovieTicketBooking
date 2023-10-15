@@ -10,12 +10,16 @@ import { MovieService } from 'src/app/services/movie.services';
 })
 export class DashboardComponent implements OnInit {
   movies: any[] = [];
+ 
+
 
   constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {
     this.movieService.getMovies().subscribe((data: any[]) => {
       this.movies = data;
+    
+  
     });
   }
 }

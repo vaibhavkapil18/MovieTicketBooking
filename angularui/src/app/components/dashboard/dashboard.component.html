@@ -1,30 +1,26 @@
-
 <app-navigation></app-navigation>
 <div>
-    <h2>Movie Dashboard- LATEST MOVIES</h2>
-    <div *ngFor="let movie of movies">
-      <div class="movie-card">
-        <img [src]="movie.imageURL"url="https://m.media-amazon.com/images/M/MV5BOTA3Mjk1YjgtODU1Mi00YzY4LTk1ZjctNmE2Mjc4NGI3MGI1XkEyXkFqcGdeQXVyNjQ1MDcxNzM@._V1_SX300_CR0,0,300,441_AL_.jpg" alt="{{ movie.title }} Image" />
+    <h2>Movie Dashboard - LATEST MOVIES</h2>
+    <div class="movie-container">
+      <div *ngFor="let movie of movies" class="movie-card">
+        <img [src]="movie.PosterURL" alt="{{ movie.title }} Image" />
         <div class="movie-details">
           <h3>{{ movie.title }}</h3>
           <p>{{ movie.description }}</p>
           <p>Release Date: {{ movie.releaseDate }}</p>
           <p>Genre: {{ movie.genre }}</p>
           <p>Duration (Minutes): {{ movie.durationMinutes }}</p>
-
         </div>
-        <button class="BookTickets" ><i class="fa fa-ticket"></i> Book Tickets
-        </button>
-
+        <button class="BookTickets"><i class="fa fa-ticket"></i> Book Tickets</button>
       </div>
     </div>
-  </div>
+</div>
   
-  <footer>
-	<p>
-		Created with <i class="fa fa-heart"></i> by
-		<a target="_blank">@Vaibhav Kapil</a>
-		- For Merudata Movie Tickets Booking Application
-		<a target="_blank" ></a>.
-	</p>
+<footer>
+    <p>
+        Created with <i class="fa fa-heart"></i> by
+        <a target="_blank">@Vaibhav Kapil</a>
+        - For Merudata Movie Tickets Booking Application
+        <a target="_blank" ></a>.
+    </p>
 </footer>
