@@ -20,23 +20,25 @@ namespace AngularAPI.Controllers
 
             // GET: api/Location
             [HttpGet]
-            public async Task<ActionResult<IEnumerable<Location>>> GetLocations()
+            public IActionResult GetLocations()
             {
-                return await _context.Locations.ToListAsync();
+        
+                 var LocationNames = _context.Locations.Select(Location => Location.LocationName).ToList();
+                 return Ok(LocationNames);
             }
 
             // GET: api/Location/5
             [HttpGet("{id}")]
-            public async Task<ActionResult<Location>> GetLocation(int id)
+            public IActionResult GetLocation(int id)
             {
-                var location = await _context.Locations.FindAsync(id);
+                var location = _context.Locations.Find(id);
 
                 if (location == null)
                 {
                     return NotFound();
                 }
 
-                return location;
+                return Ok(location);
             }
 
             // POST: api/Location

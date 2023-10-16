@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { LocationSelectorComponent } from './location-selector/location-selector.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     SignupComponent,
     DashboardComponent,
     NavigationComponent,
+    LocationSelectorComponent,
     
   ],
   imports: [
