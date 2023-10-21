@@ -1,18 +1,17 @@
 <nav class="navbar">
-    <div class="container">
-      <div class="nav-items">
-        <a routerLink="/home">Home</a>
-        <a routerLink="/movies">Movies</a>
-        <a routerLink="/location-selector">Location</a> <!-- New Location Link -->
-        <a routerLink="/language">Language</a> <!-- New Language Link -->
-      </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Search Movies" />
-        <button (click)="searchMovies()">Search</button>
-      </div>
-      <div class="logout">
-        <button (click)="logout()">Logout</button>
-      </div>
+  <div class="container">
+    <div class="nav-items">
+      <a routerLink="/home">Home</a>
+      <a routerLink="/movies">Movies</a>
+      <a routerLink="/location-selector" class="location-link">Location</a> <!-- New Location Link with added class -->
+      <a routerLink="/language">Language</a> <!-- New Language Link -->
     </div>
-  </nav>
-  
+    <div class="search-bar">
+      <input type="text" placeholder="Search Movies" />
+      <button (click)="searchMovies()">Search</button>
+    </div>
+    <div class="logout">
+      <button (click)="logout()">Logout</button>
+    </div>
+  </div>
+</nav>

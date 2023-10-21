@@ -13,10 +13,16 @@ namespace AngularAPI.Context
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Location> Locations { get; set; }
 
-
-        protected override void OnModelCreating(ModelBuilder modelbuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelbuilder.Entity<User>().ToTable("users");
+            modelBuilder.Entity<User>().ToTable("users");
+
+            modelBuilder.Entity<Movie>()
+             .HasOne(m => m.Location)
+             .WithMany()
+             .HasForeignKey(m => m.LocationId)
+             .OnDelete(DeleteBehavior.SetNull); // Set the foreign key to null on delete
+
         }
     }
 }

@@ -68,3 +68,9 @@ footer a {
   color: #3c97bf;
   text-decoration: none;
 }
+/* Add a hover effect to the Location link */
+.location-link:hover {
+  background-color: #ffa500; /* Change the background color on hover (you can choose your desired color) */
+  color: #fff; /* Change the text color on hover */
+  border-radius: 4px; /* Add rounded corners on hover */
+}
