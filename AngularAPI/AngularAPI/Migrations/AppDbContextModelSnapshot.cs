@@ -55,12 +55,6 @@ namespace AngularAPI.Migrations
                     b.Property<string>("Genre")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("LocationId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("LocationId1")
-                        .HasColumnType("int");
-
                     b.Property<string>("PosterURL")
                         .HasColumnType("nvarchar(max)");
 
@@ -71,10 +65,6 @@ namespace AngularAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MovieID");
-
-                    b.HasIndex("LocationId");
-
-                    b.HasIndex("LocationId1");
 
                     b.ToTable("Movies");
                 });
@@ -113,24 +103,33 @@ namespace AngularAPI.Migrations
                     b.ToTable("users", (string)null);
                 });
 
-            modelBuilder.Entity("AngularAPI.Models.Movie", b =>
+            modelBuilder.Entity("Cinema", b =>
                 {
-                    b.HasOne("AngularAPI.Models.Location", "Location")
-                        .WithMany()
-                        .HasForeignKey("LocationId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                    b.Property<int>("CinemaID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.HasOne("AngularAPI.Models.Location", null)
-                        .WithMany("Movies")
-                        .HasForeignKey("LocationId1");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CinemaID"));
 
-                    b.Navigation("Location");
-                });
+                    b.Property<string>("CinemaGenre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-            modelBuilder.Entity("AngularAPI.Models.Location", b =>
-                {
-                    b.Navigation("Movies");
+                    b.Property<string>("CinemaName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CityName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CinemaID");
+
+                    b.ToTable("Cinemas");
                 });
 #pragma warning restore 612, 618
         }

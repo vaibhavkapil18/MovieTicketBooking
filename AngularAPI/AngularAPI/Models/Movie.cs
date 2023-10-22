@@ -11,9 +11,6 @@ namespace AngularAPI.Models
         public string Genre { get; set; }
         public int DurationMinutes { get; set; }
         public string PosterURL { get; set; }
-        [ForeignKey("LocationId")]
-        public int LocationId { get; set; }
-
-        public Location Location { get; set; }
+       
     }
 }
