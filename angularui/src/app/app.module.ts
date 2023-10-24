@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { LocationSelectorComponent } from './location-selector/location-selector.component';
+import { CinemaComponent } from './components/cinema/cinema.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { LocationSelectorComponent } from './location-selector/location-selector
     DashboardComponent,
     NavigationComponent,
     LocationSelectorComponent,
+    CinemaComponent,
     
   ],
   imports: [
