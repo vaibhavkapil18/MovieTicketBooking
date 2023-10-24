@@ -24,5 +24,5 @@ export class LocationSelectorComponent implements OnInit {
     this.selectedLocation = location;
     // You can add further actions related to city selection, like navigating to the next page, etc.
   }
-  
+
 }
