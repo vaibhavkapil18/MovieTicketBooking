@@ -8,6 +8,11 @@ import { Router } from '@angular/router'; // Import the Router module to navigat
 })
 export class NavigationComponent implements OnInit {
   constructor(private router: Router) {} // Inject the Router module
+  showLocationSelector = false; // Initialize as hidden
+
+  toggleLocationSelector() {
+    this.showLocationSelector = !this.showLocationSelector;
+  }
 
   ngOnInit(): void {}
 

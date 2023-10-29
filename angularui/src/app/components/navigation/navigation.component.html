@@ -3,7 +3,8 @@
     <div class="nav-items">
       <a routerLink="/home">Home</a>
       <a routerLink="/movies">Movies</a>
-      <a routerLink="/location-selector" class="location-link">Location</a> <!-- New Location Link with added class -->
+      <a routerLink="/Dashboard" class="location-link" (click)="toggleLocationSelector()">Location</a>
+
       <a routerLink="/language">Language</a> <!-- New Language Link -->
     </div>
     <div class="search-bar">

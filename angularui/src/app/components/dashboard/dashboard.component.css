@@ -59,3 +59,116 @@ footer a {
   color: #3c97bf;
   text-decoration: none;
 }
+/* Style for the language filter buttons */
+.language-filter {
+  margin-top: 20px;
+}
+
+.language-filter button {
+  background-color: #007BFF; /* Blue color for buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px; /* Add space between buttons */
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold; /* Make text bold */
+  transition: background-color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Style for the "All" button */
+.language-filter button:last-child {
+  background-color: #6c757d; /* Gray color for the "All" button */
+}
+
+/* Change button color on hover */
+.language-filter button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Style for the location filter */
+.location-filter {
+  margin-top: 20px;
+}
+
+/* Style for the location select dropdown (optional) */
+#location-select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style for the movie cards */
+.movie-card {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the "Book Tickets" button */
+.BookTickets {
+  background-color: #28a745; /* Green color for the button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Change button color on hover */
+.BookTickets:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Add more CSS styles as needed */
+.filter-container {
+  display: flex;
+  justify-content: space-between; /* Spread content to both ends */
+  align-items: center;
+}
+
+.language-filter {
+  margin-right: 20px;
+}
+
+.location-filter {
+  display: flex;
+  align-items: center;
+}
+
+#location-select {
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  width: 150px; /* Adjust the width as needed */
+
+}
+
+#location-select:hover {
+  border-color: #007BFF; /* Highlight border on hover */
+}
+
+/* Custom dropdown arrow */
+#location-select::after {
+  content: "\25BC"; /* Downward triangle character */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevents interaction with the arrow */
+}
+
+
+
+
+
+
+

@@ -109,6 +109,12 @@ namespace AngularAPI.Controllers
 
             return NoContent();
         }
+        [HttpGet("ByLanguage/{language}")]
+        public async Task<IActionResult> GetMoviesByLanguage(string language)
+        {
+            var movies = await _context.Movies.Where(m => m.Language == language).ToListAsync();
+            return Ok(movies);
+        }
 
         private bool MovieExists(int id)
         {

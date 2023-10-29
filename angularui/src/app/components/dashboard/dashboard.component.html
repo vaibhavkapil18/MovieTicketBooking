@@ -1,25 +1,46 @@
 <app-navigation></app-navigation>
 <div>
-    <h2>Movie Dashboard - LATEST MOVIES</h2>
-    <div class="movie-container">
-      <div *ngFor="let movie of movies" class="movie-card">
-        <img [src]="movie.PosterUrl" alt="{{ movie.title }} Image" />
-        <div class="movie-details">
-          <h3>{{ movie.title }}</h3>
-          <p>Release Date: {{ movie.releaseDate }}</p>
-          <p>Language:{{movie.language}}</p>
-          <p>Genre: {{ movie.genre }}</p>
-        </div>
-        <button class="BookTickets"><i class="fa fa-ticket"></i> Book Tickets</button>
-      </div>
+  <h2>Movie Dashboard - LATEST MOVIES</h2>
+
+  <div class="filter-container">
+    <div class="language-filter">
+      <button (click)="selectLanguage('Telugu')">Telugu</button>
+      <button (click)="selectLanguage('Hindi')">Hindi</button>
+      <button (click)="selectLanguage('Tamil')">Tamil</button>
+      <button (click)="selectLanguage('All')">All</button>
     </div>
-</div>
   
+    <div class="location-filter">
+      <label for="location-select">Select Location:</label>
+      <select id="location-select" [(ngModel)]="selectedLocation" (change)="filterMoviesByLocation()">
+        <option value="All">All</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Chennai">Chennai</option>
+        <!-- Add more locations as needed -->
+      </select>
+    </div>
+  </div>
+  
+  <div class="movie-container">
+    <div *ngFor="let movie of filteredMovies" class="movie-card">
+      <img [src]="movie.PosterUrl" alt="{{ movie.title }} Image" />
+      <div class="movie-details">
+        <h3>{{ movie.title }}</h3>
+        <p>Release Date: {{ movie.releaseDate }}</p>
+        <p>Language: {{ movie.language }}</p>
+        <p>Genre: {{ movie.genre }}</p>
+      </div>
+      <button class="BookTickets"><i class="fa fa-ticket"></i> Book Tickets</button>
+    </div>
+  </div>
+</div>
+
 <footer>
-    <p>
-        Created with <i class="fa fa-heart"></i> by
-        <a target="_blank">@Vaibhav Kapil</a>
-        - For Merudata Movie Tickets Booking Application
-        <a target="_blank" ></a>.
-    </p>
+  <p>
+    Created with <i class="fa fa-heart"></i> by
+    <a target="_blank">@Vaibhav Kapil</a>
+    - For Merudata Movie Tickets Booking Application
+    <a target="_blank" ></a>.
+  </p>
 </footer>
