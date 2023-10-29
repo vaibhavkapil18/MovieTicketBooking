@@ -15,9 +15,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Title)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
+            
             <th>
                 @Html.DisplayNameFor(model => model.ReleaseDate)
             </th>
@@ -25,10 +23,7 @@
                 @Html.DisplayNameFor(model => model.Genre)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DurationMinutes)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PosterURL)
+                @Html.DisplayNameFor(model => model.PosterUrl)
             </th>
             <th></th>
         </tr>
@@ -39,25 +34,21 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
+           
             <td>
                 @Html.DisplayFor(modelItem => item.ReleaseDate)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Genre)
             </td>
+
             <td>
-                @Html.DisplayFor(modelItem => item.DurationMinutes)
+                @Html.DisplayFor(modelItem => item.PosterUrl)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PosterURL)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.MovieID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MovieID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MovieID">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }

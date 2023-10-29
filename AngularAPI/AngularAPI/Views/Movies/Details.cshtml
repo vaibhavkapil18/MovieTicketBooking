@@ -17,12 +17,6 @@
             @Html.DisplayFor(model => model.Title)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.ReleaseDate)
         </dt>
         <dd class = "col-sm-10">
@@ -34,21 +28,16 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Genre)
         </dd>
+      
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DurationMinutes)
+            @Html.DisplayNameFor(model => model.PosterUrl)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DurationMinutes)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PosterURL)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PosterURL)
+            @Html.DisplayFor(model => model.PosterUrl)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.MovieID">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>

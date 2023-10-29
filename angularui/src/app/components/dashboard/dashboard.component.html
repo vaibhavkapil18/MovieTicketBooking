@@ -3,13 +3,12 @@
     <h2>Movie Dashboard - LATEST MOVIES</h2>
     <div class="movie-container">
       <div *ngFor="let movie of movies" class="movie-card">
-        <img [src]="movie.PosterURL" alt="{{ movie.title }} Image" />
+        <img [src]="movie.PosterUrl" alt="{{ movie.title }} Image" />
         <div class="movie-details">
           <h3>{{ movie.title }}</h3>
-          <p>{{ movie.description }}</p>
           <p>Release Date: {{ movie.releaseDate }}</p>
+          <p>Language:{{movie.language}}</p>
           <p>Genre: {{ movie.genre }}</p>
-          <p>Duration (Minutes): {{ movie.durationMinutes }}</p>
         </div>
         <button class="BookTickets"><i class="fa fa-ticket"></i> Book Tickets</button>
       </div>
