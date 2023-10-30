@@ -10,6 +10,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { LocationSelectorComponent } from './location-selector/location-selector.component';
 import { FormsModule } from '@angular/forms';
+import { ImageSliderComponent } from './components/image-slider/image-slider.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     NavigationComponent,
     LocationSelectorComponent,
+    ImageSliderComponent,
   ],
   imports: [
     BrowserModule,

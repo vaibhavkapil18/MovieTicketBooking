@@ -22,7 +22,7 @@ export class DashboardComponent implements OnInit {
   }
 
   filterMoviesByLanguage() {
-    if (this.selectedLanguage === '') {
+    if (this.selectedLanguage === 'All') {
       this.filteredMovies = this.movies; // Show all movies when no language is selected
     } else {
       this.filteredMovies = this.movies.filter((movie) => movie.language === this.selectedLanguage);

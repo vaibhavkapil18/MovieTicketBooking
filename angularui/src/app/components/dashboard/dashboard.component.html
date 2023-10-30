@@ -24,12 +24,12 @@
   
   <div class="movie-container">
     <div *ngFor="let movie of filteredMovies" class="movie-card">
-      <img [src]="movie.PosterUrl" alt="{{ movie.title }} Image" />
+      <!--<img [src]="movie.PosterUrl" alt="{{ movie.title }} Image" />-->
+      <img [src]="movie.posterUrl" class="card-img-top" alt="{{ movie.title }}">
       <div class="movie-details">
         <h3>{{ movie.title }}</h3>
-        <p>Release Date: {{ movie.releaseDate }}</p>
-        <p>Language: {{ movie.language }}</p>
-        <p>Genre: {{ movie.genre }}</p>
+        <p>{{ movie.language }}</p>
+        <p>{{ movie.genre }}</p>
       </div>
       <button class="BookTickets"><i class="fa fa-ticket"></i> Book Tickets</button>
     </div>

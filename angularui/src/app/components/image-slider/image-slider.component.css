@@ -1,0 +1,23 @@
+.image-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Set the desired height */
+    overflow: hidden; /* Hide overflow for rectangular images */
+  }
+  
+  /* Set a fixed width and height for each image */
+  .slider-image {
+    width: 400px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    border: 1px solid #ccc;
+    background-size: cover;
+    transition: opacity 0.5s; /* Add a transition effect for smoother animations */
+    opacity: 0; /* Hide all images by default */
+  }
+  
+  /* Show the current image */
+  .slider-image.current {
+    opacity: 1;
+  }
+  

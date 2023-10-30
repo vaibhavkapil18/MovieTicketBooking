@@ -5,7 +5,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { LocationSelectorComponent } from './location-selector/location-selector.component';
-import { CinemaComponent } from './components/cinema/cinema.component';
+import { ImageSliderComponent } from './components/image-slider/image-slider.component';
 
 const routes: Routes = [
   {path:'login',component: LoginComponent},
@@ -13,7 +13,8 @@ const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path:'',component: LoginComponent},
   {path:'location-selector',component:LocationSelectorComponent},
-  {path:'cinema',component:CinemaComponent}
+  {path:'imageslider',component:ImageSliderComponent}
+
 ];
 
 @NgModule({
