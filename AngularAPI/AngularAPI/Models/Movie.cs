@@ -1,8 +1,11 @@
-﻿namespace AngularAPI.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace AngularAPI.Models
 {
     public class Movie
     {
-        public int Id { get; set; }
+        [Key]
+        public int MovieId { get; set; }
         public string Title { get; set; }
         public DateTime ReleaseDate { get; set; }
         public string Location { get; set; }

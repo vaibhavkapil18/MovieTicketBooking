@@ -11,6 +11,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { LocationSelectorComponent } from './location-selector/location-selector.component';
 import { FormsModule } from '@angular/forms';
 import { ImageSliderComponent } from './components/image-slider/image-slider.component';
+import { TheaterListComponent } from './components/theater-list/theater-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { ImageSliderComponent } from './components/image-slider/image-slider.com
     NavigationComponent,
     LocationSelectorComponent,
     ImageSliderComponent,
+    TheaterListComponent,
   ],
   imports: [
     BrowserModule,

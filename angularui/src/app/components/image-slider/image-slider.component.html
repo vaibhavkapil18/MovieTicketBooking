@@ -1,8 +1,10 @@
 <div class="image-slider">
-    <div class="slider-image" [style.backgroundImage]="'url(' + currentImage + ')'"></div>
-    <div class="slider-image" [style.backgroundImage]="'url(' + image2 + ')'"></div>
-    <div class="slider-image" [style.backgroundImage]="'url(' + image3 + ')'"></div>
-    <div class="slider-image" [style.backgroundImage]="'url(' + image4 + ')'"></div>
-    <!-- Add more images as needed -->
+  <div class="slider-item" *ngFor="let item of sliderItems; let i = index" [class.active]="i === currentIndex">
+    <div class="slider-content">
+      <h2 class="slider-title">{{ item.title }}</h2>
+      <p class="slider-description">{{ item.description }}</p>
+      <a class="slider-link" href="{{ item.link }}" target="_blank">{{ item.linkText }}</a>
+    </div>
+    <img [src]="item.imageUrl" alt="Slider Image" class="slider-image" />
   </div>
-  
+</div>

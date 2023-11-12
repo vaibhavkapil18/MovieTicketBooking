@@ -15,7 +15,7 @@ namespace AngularAPI.Migrations
                 name: "movies",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    MovieId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ReleaseDate = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -26,7 +26,7 @@ namespace AngularAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_movies", x => x.Id);
+                    table.PrimaryKey("PK_movies", x => x.MovieId);
                 });
         }
 

@@ -1,0 +1,11 @@
+<!-- theater-list.component.html -->
+
+<div *ngIf="theaters.length > 0">
+    <h3>Theatres for the selected movie:</h3>
+    <ul>
+      <li *ngFor="let theater of theaters">
+        {{ theater.theatreName }} - {{ theater.theatreLocation }}
+      </li>
+    </ul>
+  </div>
+  

@@ -56,14 +56,14 @@ namespace AngularAPI.Controllers
             _context.Movies.Add(movie);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetMovie", new { id = movie.Id }, movie);
+            return CreatedAtAction("GetMovie", new { id = movie.MovieId }, movie);
         }
 
         // PUT: api/Movies/5
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateMovie(int id, [FromBody] Movie movie)
         {
-            if (id != movie.Id)
+            if (id != movie.MovieId)
             {
                 return BadRequest("Mismatched IDs.");
             }
@@ -118,7 +118,7 @@ namespace AngularAPI.Controllers
 
         private bool MovieExists(int id)
         {
-            return _context.Movies.Any(e => e.Id == id);
+            return _context.Movies.Any(e => e.MovieId == id);
         }
     }
 }

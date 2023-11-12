@@ -6,6 +6,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { LocationSelectorComponent } from './location-selector/location-selector.component';
 import { ImageSliderComponent } from './components/image-slider/image-slider.component';
+import { TheaterListComponent } from './components/theater-list/theater-list.component';
 
 const routes: Routes = [
   {path:'login',component: LoginComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path:'',component: LoginComponent},
   {path:'location-selector',component:LocationSelectorComponent},
-  {path:'imageslider',component:ImageSliderComponent}
+  {path:'imageslider',component:ImageSliderComponent},
+  {path:'theatrelist',component:TheaterListComponent}
 
 ];
 

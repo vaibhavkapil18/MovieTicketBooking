@@ -11,11 +11,14 @@ namespace AngularAPI.Context
         public DbSet<User> Users { get; set; }
         public DbSet<Movie> Movies { get; set; }
 
+        public DbSet<Theatre> Theatres { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().ToTable("users");
             modelBuilder.Entity<Movie>().ToTable("movies");
+            modelBuilder.Entity<Theatre>().ToTable("theatres");
 
          
         }

@@ -1,23 +1,62 @@
 .image-slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px; /* Set the desired height */
-    overflow: hidden; /* Hide overflow for rectangular images */
-  }
-  
-  /* Set a fixed width and height for each image */
-  .slider-image {
-    width: 400px; /* Adjust the width as needed */
-    height: 300px; /* Adjust the height as needed */
-    border: 1px solid #ccc;
-    background-size: cover;
-    transition: opacity 0.5s; /* Add a transition effect for smoother animations */
-    opacity: 0; /* Hide all images by default */
-  }
-  
-  /* Show the current image */
-  .slider-image.current {
-    opacity: 1;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Set the desired height */
+  overflow: hidden; /* Hide overflowing image parts */
+}
+
+.slider-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease;
+  opacity: 0;
+  position: absolute;
+}
+
+.slider-item.active {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.slider-content {
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+}
+
+.slider-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.slider-description {
+  font-size: 18px;
+  margin: 0;
+}
+
+.slider-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.slider-link:hover {
+  background-color: #0056b3;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

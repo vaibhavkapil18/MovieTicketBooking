@@ -31,7 +31,10 @@
         <p>{{ movie.language }}</p>
         <p>{{ movie.genre }}</p>
       </div>
-      <button class="BookTickets"><i class="fa fa-ticket"></i> Book Tickets</button>
+      <button (click)="bookTickets(movie.id)" class="BookTickets">
+        <i class="fa fa-ticket"></i> Book Tickets
+      </button>
+      
     </div>
   </div>
 </div>
